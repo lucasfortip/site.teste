@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário!</title>
+    <style>
+        /* Importando uma fonte bonitinha do Google */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffe6fa 0%, #e3f2fd 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            color: #40cfff;
+        }
+
+        /* --- ANIMAÇÕES --- */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* --- SEÇÕES --- */
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 2s ease-out;
+        }
+
+        .sobre, .amizade {
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* --- GALERIAS DE FOTOS --- */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse nas fotos fofas */
+        .galeria img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Efeito louco para as FOTOS ZOADAS */
+        .galeria-zoada img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ff4081;
+            transition: all 0.4s ease;
+        }
+
+        .galeria-zoada img:hover {
+            transform: rotate(360deg) scale(1.2); /* A foto gira e cresce! */
+            border-color: #00e5ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-weight: bold;
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Feliz Aniversário, Luiza! 💖</h1>
+        <p>Um pequeno site para a melhor pessoa do mundo.</p>
+    </header>
+
+    <section class="sobre">
+        <h2>Sobre você...</h2>
+        <p>
+            Parabéns Luiza, hoje é seu dia, e como forma de agradecer por tudo que vc fez por mim
+            e pela pessoa que você é te fiz uma homenagem, TE AMO!!!
+        </p>
+    </section>
+
+    <section class="amizade">
+        <h2>Nossa Amizade</h2>
+        <p>
+            Desde que nos conhecemos, minha vida ficou muito mais divertida (e caótica). 
+            Obrigada por ser meu porto seguro e a melhor companhia para todas as horas, 
+            vc me irrita as vezes me tira do sério e a cada 2 semanas brigamos, mas mesmo assim,
+            eu amo você.
+        </p>
+        <div class="galeria">
+            <img src="luiza1.png.png" alt="Nossa foto fofa 1">
+            <img src="luiza2.jpg.jpg" alt="Nossa foto fofa 2">
+            <img src="luiza3.png.png" alt="Nossa foto fofa 3">
+        </div>
+    </section>
+
+    <section class="amizade">
+        <h2>O Mural da Vergonha 😂</h2>
+        <p>Porque amizade verdadeira é ter um arsenal de fotos que você odiaria que vazassem.</p>
+        <div class="galeria galeria-zoada">
+            <img src="luiza5.jpg" alt="Foto zoada 1">
+            <img src="luiza6.jpg" alt="Foto zoada 2">
+            <img src="luiza7.jpg" alt="Foto zoada 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>Feito com muito amor, de Forti para você. Aproveite o seu dia! 🎉</p>
+    </footer>
+
+</body>
+</html>
